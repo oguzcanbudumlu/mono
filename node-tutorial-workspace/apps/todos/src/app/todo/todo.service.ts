@@ -13,6 +13,7 @@ const todos: Todo[] = [
 @Injectable()
 export class TodosService {
   getTodos(): Todo[] {
+    console.log("test")
     return todos;
   }
 }
