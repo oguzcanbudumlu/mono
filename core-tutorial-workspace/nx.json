@@ -15,8 +15,7 @@
           "build",
           "lint",
           "test",
-          "e2e",
-          "serve"
+          "e2e"
         ]
       }
     }
