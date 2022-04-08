@@ -1,0 +1,10 @@
+{
+  "name": "@first-workspace/complex",
+  "version": "0.0.0",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "dependencies": {
+    "@first-workspace/simple": "*"
+  }
+}
