@@ -2,7 +2,7 @@
   "extends": "@nrwl/workspace/presets/core.json",
   "npmScope": "core-tutorial-workspace",
   "affected": {
-    "defaultBase": "main"
+    "defaultBase": "master"
   },
   "cli": {
     "defaultCollection": "@nrwl/workspace"
