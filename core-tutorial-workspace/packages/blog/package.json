@@ -2,7 +2,7 @@
   "name": "blog",
   "description": "eleventy blog",
   "version": "1.0.0",
-  "dependency": {
+  "devDependencies": {
     "ascii": "*"
   },
   "scripts": {
