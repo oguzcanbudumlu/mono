@@ -11,9 +11,8 @@ const todos: Todo[] = [
 ];
 
 @Injectable()
-export class TodosService {
+export class TodoService {
   getTodos(): Todo[] {
-    console.log("test")
     return todos;
   }
 }
