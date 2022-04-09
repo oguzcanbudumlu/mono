@@ -10,9 +10,13 @@ import {
   Req,
 } from '@nestjs/common';
 import { Request } from 'express';
+import { CatsService } from './cats.service';
+import { Cat } from './interfaces/cat.interface';
 
 @Controller('cats')
 export class CatsController {
+  constructor(private catsService: CatsService) {}
+
   @Post()
   create(): string {
     return 'This action adds a new cat';
@@ -31,8 +35,8 @@ export class CatsController {
   }
 
   @Get()
-  findAll(@Req() request: Request): string {
-    return 'This action returns all cats';
+  async findAll(): Promise<Cat[]> {
+    return this.catsService.findAll();
   }
 
   @Get('ab*cd')
