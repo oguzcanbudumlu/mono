@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@node-tutorial-workspace/auth": ["libs/auth/src/index.ts"],
       "@node-tutorial-workspace/data": ["libs/data/src/index.ts"]
     }
   },
