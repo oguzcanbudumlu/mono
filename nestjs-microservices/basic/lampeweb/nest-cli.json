@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/lampeweb/src",
+  "monorepo": true,
+  "root": "apps/lampeweb",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/lampeweb/tsconfig.app.json"
+  },
+  "projects": {
+    "lampeweb": {
+      "type": "application",
+      "root": "apps/lampeweb",
+      "entryFile": "main",
+      "sourceRoot": "apps/lampeweb/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/lampeweb/tsconfig.app.json"
+      }
+    },
+    "blog": {
+      "type": "application",
+      "root": "apps/blog",
+      "entryFile": "main",
+      "sourceRoot": "apps/blog/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/blog/tsconfig.app.json"
+      }
+    }
+  }
+}
