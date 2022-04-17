@@ -1,0 +1,4 @@
+- [+]  Query Service has zero dependencies on other services.
+- [+] Query Service will be extremely fast.
+- [-] Data duplication.
+- [-] Harder to understand.
