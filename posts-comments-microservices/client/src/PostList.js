@@ -8,11 +8,13 @@ const PostList = () => {
 
   const fetchPosts = async () => {
     const res = await axios.get("http://localhost:4002/posts");
+    console.log("here");
     console.log(res.data);
     setPosts(res.data);
   };
 
   useEffect(() => {
+    console.log("hgere");
     fetchPosts();
   }, []);
 
