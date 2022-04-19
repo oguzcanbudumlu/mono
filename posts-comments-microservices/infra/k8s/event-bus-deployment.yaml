@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: event-bus-deployment
+spec:
+  replicas: 2
+  selector: # deployment selects
+    matchLabels:
+      app: event-bus # which labels for pods to manage
+  template:
+    metadata:
+      labels:
+        app: event-bus # expose to deployment and service
+    spec:
+      containers:
+        - name: event-bus
+          image: obudumlu/event-bus
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: event-bus-service
+spec:
+  selector:
+    app: event-bus
+  type: ClusterIP # already by default
+  ports:
+    - name: event-bus
+      protocol: TCP
+      port: 4005
+      targetPort: 4005

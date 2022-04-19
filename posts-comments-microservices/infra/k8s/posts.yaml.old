@@ -5,5 +5,5 @@ metadata:
 spec:
   containers:
     - name: posts
-      image: ob/posts:0.0.1
+      image: obudumlu/posts:0.0.1
 
