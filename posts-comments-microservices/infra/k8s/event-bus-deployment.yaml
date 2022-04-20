@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: event-bus-deployment
 spec:
-  replicas: 2
+  replicas: 1
   selector: # deployment selects
     matchLabels:
       app: event-bus # which labels for pods to manage

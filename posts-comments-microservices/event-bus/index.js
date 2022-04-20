@@ -14,9 +14,9 @@ app.post("/events", async (req, res) => {
 
   console.log("event", event);
   await axios.post("http://posts-clusterip-service:4000/events", event);
-  // await axios.post("http://localhost:4001/events", event);
-  // await axios.post("http://localhost:4002/events", event);
-  // await axios.post("http://localhost:4003/events", event);
+  await axios.post("http://comments-service:4001/events", event);
+  await axios.post("http://query-service:4002/events", event);
+  await axios.post("http://moderation-service:4003/events", event);
 
   res.send({ status: "OK" });
 });

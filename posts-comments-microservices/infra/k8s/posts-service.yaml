@@ -11,5 +11,3 @@ spec:
       protocol: TCP
       port: 4000 # exposed by service itself
       targetPort: 4000 #  exposed by container (posts/index.js)
-
-
