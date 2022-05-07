@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-deployment
+spec:
+  replicas: 1
+  selector: # deployment selects
+    matchLabels:
+      app: client # which labels for pods to manage
+  template:
+    metadata:
+      labels:
+        app: client # expose to deployment and service
+    spec:
+      containers:
+        - name: client
+          image: obudumlu/client
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: client-service
+spec:
+  selector:
+    app: client
+  type: ClusterIP # already by default
+  ports:
+    - name: client
+      protocol: TCP
+      port: 3000
+      targetPort: 3000
