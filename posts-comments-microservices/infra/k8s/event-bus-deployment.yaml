@@ -21,9 +21,9 @@ kind: Service
 metadata:
   name: event-bus-service
 spec:
+  type: ClusterIP # already by   default
   selector:
     app: event-bus
-  type: ClusterIP # already by default
   ports:
     - name: event-bus
       protocol: TCP

@@ -11,6 +11,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get("/posts", (req, res) => {
+  console.log('get posts')
   res.send(posts);
 });
 
@@ -37,7 +38,7 @@ app.post("/events", (req, res) => {
 });
 
 app.listen(4000, () => {
-  console.log("v55");
+  console.log("v330");
   console.log("Listening on 4000");
 });
 

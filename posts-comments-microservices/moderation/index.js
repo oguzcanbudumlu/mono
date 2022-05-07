@@ -20,8 +20,11 @@ app.post("/events", async (req, res) => {
       },
     });
   }
+
+  res.send({});
 });
 
 app.listen(4003, () => {
+  console.log("v320")
   console.log("Listening on 4003");
 });

@@ -5,16 +5,18 @@ metadata:
 spec:
   replicas: 1
   selector: # deployment selects
-    matchLabels:
+    matchLabels: #key-value pairs
       app: posts # which labels for pods to manage
+      sadkasd: dasdasdas
   template:
     metadata:
       labels:
         app: posts # expose to deployment and service
+        sadkasd: dasdasdas
     spec:
       containers:
         - name: posts
-          image: obudumlu/posts
+          image: obudumlu/posts:latest
 ---
 apiVersion: v1
 kind: Service

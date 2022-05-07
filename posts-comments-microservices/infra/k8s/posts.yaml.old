@@ -6,4 +6,5 @@ spec:
   containers:
     - name: posts
       image: obudumlu/posts:0.0.1
-
+      ports:
+      - containerPort: 4000
